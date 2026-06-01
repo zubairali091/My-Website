@@ -3,38 +3,356 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List | Codex</title>
+  <meta name="description" content="Zubair Ali - BSCS student and web developer. Portfolio by Codex.">
+  <title>Zubair Ali | Codex</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <a href="../../index.html" class="back-link">← Back to Portfolio</a>
 
-    <div class="todo-app">
-      <h1>To-Do List</h1>
-      <p class="subtitle">Add tasks, mark done, and delete — saved in browser</p>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">{ }</span>
+        Codex
+      </a>
 
-      <!-- Add new task -->
-      <form id="todoForm" class="todo-form">
-        <input type="text" id="taskInput" placeholder="Enter a new task..." required>
-        <button type="submit" class="btn-add">Add</button>
-      </form>
+      <input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+      <label for="navToggle" class="menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
-      <!-- Task filters -->
-      <div class="filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="active">Active</button>
-        <button class="filter-btn" data-filter="done">Done</button>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="home-bg"></div>
+      <div class="container">
+        <div class="home-text">
+          <span class="badge">Available for learning & collaboration</span>
+          <p class="home-greeting">Hi, I'm</p>
+          <h1>Zubair Ali</h1>
+          <p class="home-role">
+            I'm a
+            <span class="typed-words">
+              <span>Web Developer</span>
+              <span>BSCS Student</span>
+              <span>Problem Solver</span>
+            </span><span class="cursor">|</span>
+          </p>
+          <p class="home-desc">
+            BSCS student passionate about web development. I build small projects
+            with HTML & CSS to grow my skills every day.
+          </p>
+          <div class="home-buttons">
+            <a href="#projects" class="btn btn-primary">See My Work</a>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
+          </div>
+          <div class="home-social">
+            
+            <a href="mailto:maherzubair401@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <!-- Task list -->
-      <ul id="taskList" class="task-list"></ul>
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
 
-      <p id="emptyMsg" class="empty-msg">No tasks yet. Add one above!</p>
-      <p id="taskCount" class="task-count"></p>
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2>Who I Am</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <div class="about-img-box">
+              <div class="about-avatar-large">ZA</div>
+            </div>
+            <div class="about-card">
+              <span class="about-card-label">Currently</span>
+              <strong>Learning Web Development</strong>
+              <p>BSCS · 3rd Year</p>
+            </div>
+          </div>
+
+          <div class="about-content reveal">
+            <p>
+              I am a <strong>BSCS student</strong> currently learning web development and programming.
+              I enjoy turning ideas into simple, working websites using HTML and CSS.
+            </p>
+            <p>
+              This portfolio showcases my learning journey and the projects I have built so far.
+              I am still improving my skills and always open to learning new things.
+            </p>
+
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-icon">🎓</span>
+                <div>
+                  <strong>Education</strong>
+                  <p>BSCS — Computer Science</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">💻</span>
+                <div>
+                  <strong>Focus Area</strong>
+                  <p>Frontend & Web Development</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🎯</span>
+                <div>
+                  <strong>Goal</strong>
+                  <p>Become a skilled web developer</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">My Skills</span>
+          <h2>What I'm Learning</h2>
+          <p class="section-desc">Technologies I practice regularly while building projects.</p>
+        </div>
+
+        <div class="skills-wrapper">
+          <div class="skills-list reveal">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>HTML</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>CSS</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Responsive Design</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+
+          <div class="skills-cards reveal">
+            <div class="skill-card">
+              <div class="skill-card-icon">🌐</div>
+              <h3>HTML & CSS</h3>
+              <p>Page structure, layouts, flexbox, grid & styling</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card-icon">📱</div>
+              <h3>Responsive Design</h3>
+              <p>Mobile-first layouts that work on all screens</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2>My Projects</h2>
+          <p class="section-desc">Projects I built while learning — each one taught me something new.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-img project-img--1">
+              <div class="project-overlay">
+                <a href="projects/student-management-system/index.html" class="btn btn-sm">Live Demo</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Student Management System</h3>
+              <p>Add, display, search, and delete student records with a clean table interface.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img project-img--2">
+              <div class="project-overlay">
+                <a href="projects/calculator/index.html" class="btn btn-sm">Live Demo</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Calculator</h3>
+              <p>A functional calculator with basic arithmetic operations and a modern UI.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img project-img--3">
+              <div class="project-overlay">
+                <a href="projects/todo-list/index.html" class="btn btn-sm">Live Demo</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>To-Do List</h3>
+              <p>Add tasks, mark them complete, and delete items with a clean list layout.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img project-img--4">
+              <div class="project-overlay">
+                <a href="#home" class="btn btn-sm">You Are Here</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Portfolio Website</h3>
+              <p>This personal portfolio — responsive, animated, and built with HTML & CSS.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Contact</span>
+          <h2>Let's Connect</h2>
+          <p class="section-desc">Send a message below — it goes straight to my email. You can also use the email link on the right.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- FormSubmit: pehli dafa submit par Gmail se activation link confirm karein -->
+          <form
+            class="contact-form reveal"
+            action="https://formsubmit.co/maherzubair401@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New message from Codex portfolio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p class="form-note">Messages are delivered to <strong>maherzubair401@gmail.com</strong>. You can reply directly from your inbox.</p>
+          </form>
+
+          <div class="contact-info reveal">
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:maherzubair401@gmail.com">maherzubair401@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <p>Pakistan</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">🎓</div>
+              <div>
+                <strong>Status</strong>
+                <p>BSCS Student · Learning Web Dev</p>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <p>Find me on</p>
+              <div class="social-row">
+                <a href="https://wa.me/923172960104" target="_blank">WhatsApp</a>
+                <a href="https://instagram.com/zubair_ali091" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://twitter.com/zubairsaab566" target="_blank" rel="noopener noreferrer">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">{ }</span>
+        Codex
+      </a>
+      <p>Built with HTML & CSS by <strong>Zubair Ali</strong></p>
+      <div class="footer-social">
+        <a href="https://wa.me/9231722960104" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+       
+      </div>
+      <p class="copyright">&copy; 2026 Codex. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <script src="script.js"></script>
+  <a href="#home" class="back-top" aria-label="Back to top">↑</a>
 </body>
 </html>
