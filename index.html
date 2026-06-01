@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List | Codex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+
+    <div class="todo-app">
+      <h1>To-Do List</h1>
+      <p class="subtitle">Add tasks, mark done, and delete — saved in browser</p>
+
+      <!-- Add new task -->
+      <form id="todoForm" class="todo-form">
+        <input type="text" id="taskInput" placeholder="Enter a new task..." required>
+        <button type="submit" class="btn-add">Add</button>
+      </form>
+
+      <!-- Task filters -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="done">Done</button>
+      </div>
+
+      <!-- Task list -->
+      <ul id="taskList" class="task-list"></ul>
+
+      <p id="emptyMsg" class="empty-msg">No tasks yet. Add one above!</p>
+      <p id="taskCount" class="task-count"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
